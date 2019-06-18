@@ -10,7 +10,7 @@
 # buzz
 multiple_of_3 = "Fizz"
 multiple_of_5 = "Buzz"
-multiple_of_both = "FizzBuzz"
+multiple_of_both = "FizBuzz"
 for i in range(1,51):
     if i % 3 is 0 and i % 5 is 0:
         print(multiple_of_both)

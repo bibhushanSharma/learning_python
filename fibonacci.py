@@ -13,4 +13,3 @@ else:
         print(current_number)
         first_number = second_number
         second_number = current_number
-
