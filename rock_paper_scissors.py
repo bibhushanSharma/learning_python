@@ -1,5 +1,5 @@
 from random import randint as random_int
-def tic_tac_toe ():
+def rock_peper_scissors ():
     quit = False
     while (quit is False):
         user_input = int(input("Enter 1 for rock, 2 for paper, and 3 for scissors: "))
@@ -30,4 +30,4 @@ def tic_tac_toe ():
         else:
             quit = False
             
-tic_tac_toe()
+rock_peper_scissors()
