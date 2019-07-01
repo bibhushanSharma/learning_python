@@ -1,5 +1,6 @@
+#allows random numbers to be inputted
 from random import randint as random_int
-
+#rock paper scissors class
 class rock_paper_scissors:
     def game (self):
         quit = False
@@ -17,6 +18,8 @@ class rock_paper_scissors:
                 win = True
             elif user_input is cpu:
                 tie = True
+            elif user_input != 1 or 2 or 3:
+                print("Not Valid Input")
             else:
                 win = False
             if win is True:
@@ -31,12 +34,14 @@ class rock_paper_scissors:
             keep_playing = int(input("Enter 1 to keep playing, enter 2 to stop playing "))
             if keep_playing is 1:
                 quit = False
-            else:
+            elif keep_playing is 2:
                 quit = True
-
+            else:
+                print("Not Valid input")
+#hangman class
 class hangman:
     def game_2(self):
-        number_of_guesses = 7
+        number_of_guesses = 6
         secret_word = ["c", "o", "a", "g", "u", "l", "a", "t", "e"]
         blank_word = [ "_ ", "_ ", "_ ", "_ ", "_ ","_ ", "_ ", "_ ", "_ " ]
         while(number_of_guesses > 0):
@@ -75,9 +80,66 @@ class hangman:
             else:
                 print("Your guess was wrong")
                 number_of_guesses -=1
-        if number_of_guesses == 0:
-            print("You lost :)")
+#images for hangman
+            if number_of_guesses == 0:
+                print("-------")
+                print(" |    |")
+                print(" O    |")
+                print("/|\   |")
+                print("/ \   |")
+                print("      |")
+                print("=========")
+                print("You lost :)")
+            elif number_of_guesses == 1:
+                print("-------")
+                print(" |    |")
+                print(" O    |")
+                print("/|\   |")
+                print("/     |")
+                print("      |")
+                print("=========")
+            elif number_of_guesses == 2:
+                print("-------")
+                print(" |    |")
+                print(" O    |")
+                print("/|\   |")
+                print("      |")
+                print("      |")
+                print("=========")
+            elif number_of_guesses == 3:
+                print("-------")
+                print(" |    |")
+                print(" O    |")
+                print("/|    |")
+                print("      |")
+                print("      |")
+                print("=========")
+            elif number_of_guesses == 4:
+                print("-------")
+                print(" |    |")
+                print(" O    |")
+                print(" |    |")
+                print("      |")
+                print("      |")
+                print("=========")
+            elif number_of_guesses == 5:
+                print("-------")
+                print(" |    |")
+                print(" O    |")
+                print("      |")
+                print("      |")
+                print("      |")
+                print("=========")
+            elif number_of_guesses == 6:
+                print("-------")
+                print(" |    |")
+                print("      |")
+                print("      |")
+                print("      |")
+                print("      |")
+                print("=========")
 
+#loop that keeps the game going
 playing = True
 while playing is True:
     desision = input("Enter 1 to play 'rock paper scissors' or Enter 2 to play 'hangman' or Enter 3 to exit: ")
